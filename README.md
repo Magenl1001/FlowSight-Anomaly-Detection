@@ -1,11 +1,13 @@
 # FlowSight – Network Anomaly Detection
 
-**Isolation Forest vs. Autoencoder**, both implemented from scratch in Python/NumPy, compared in a controlled CPU benchmark on network-flow data. The project also includes a SOC analyst training website.
+**Isolation Forest vs. Autoencoder**, both implemented in Python/NumPy, compared in a controlled CPU benchmark on network-flow data. The project also includes a SOC analyst training website.
 
 Course project: *AI in Cybersecurity* (Summer Semester 2026), Lecturer: Andrei Kojukhov.
 Authors: Irvin Rosenfeld, Magen Hai Lakau.
 
 > **Note:** the course is based on NVIDIA Morpheus, but this implementation does **not** use Morpheus, RAPIDS, Triton or a GPU. See [Limitations](#limitations).
+>
+> Source code: to be added. The project presentation and poster are in this repository.
 
 ## Research question
 
@@ -62,8 +64,6 @@ A practice tool for analysts, using scripted scenarios (separate from the measur
 
 The website has no live model API, and the email examples are not a trained phishing classifier.
 
-Live demo: https://flowsight-streaming-lab.liliannbalbir.chatgpt.site/
-
 ## MITRE ATT&CK interpretation
 
 The models output anomaly scores only. They do not predict ATT&CK labels. Analyst mappings of the synthetic scenarios:
@@ -86,32 +86,6 @@ The models output anomaly scores only. They do not predict ATT&CK labels. Analys
 - Evaluate on real labeled traffic with repeated seeds
 - Measure end-to-end delay
 - Implement Morpheus / RAPIDS / Triton before comparing CPU and GPU
-
-## Repository structure
-
-<!-- TODO: update to match your actual files -->
-```
-.
-├── models/        # Isolation Forest and Autoencoder (NumPy)
-├── data/          # synthetic EVE JSON generator / sample data
-├── benchmark/     # evaluation and timing scripts
-├── website/       # SOC training website
-└── README.md
-```
-
-## How to run
-
-<!-- TODO: fill in with your real commands -->
-```bash
-pip install numpy
-python benchmark/run.py
-```
-
-## Contributions
-
-<!-- TODO: fill in the real split -->
-- **Magen Hai Lakau:** ...
-- **Irvin Rosenfeld:** ...
 
 ## References
 
